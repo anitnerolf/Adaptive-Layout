@@ -1,0 +1,80 @@
+.main-header {
+    font-family: $avenir;
+    padding-top: 67px;
+    padding-bottom: 147px;
+    font-size: 16px;
+}
+
+.logo {
+    float: left;
+}
+
+.nav-wrapper {
+    font-family: $avenir;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+}
+
+.primary-nav {
+    float: left;
+    margin-left: 121px;
+    margin-right: auto;
+    ul {
+        display: flex;
+    }
+    li {
+        margin-right: 40px;
+        &.active {
+            a {
+                &:hover {
+                    color: #F063B8;      
+                }        
+                color: #212353;
+                font-weight: 800;
+            }
+        }
+    }
+    a {
+        &:hover {
+            color: #F063B8;      
+        }
+        color: $textColor;
+        text-decoration: none;
+        font-weight: 600;
+        line-height: 60px;
+    }
+}
+
+@mixin doBtn($width: 210px) {
+    text-decoration: none;
+    color: #212353;
+    background: transparent;
+    border: 1px solid white;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 800;
+    border-radius: 50px;
+    width: $width;
+    text-align: center;
+    &:hover {
+      background: lighten(#F063B8, 5%);
+      color: #fff;
+    }
+    &:active {
+      transform: scale(0.97);
+    }
+}
+
+.button-nav {
+    float: right;
+    .btn {
+        @include doBtn();
+        margin-right: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 5px rgba(75, 93, 104, 0.1);
+        border-radius: 50px;
+    }
+}

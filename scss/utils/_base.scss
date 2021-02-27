@@ -1,0 +1,20 @@
+body {
+    font-family: $avenir;
+    font-size: $fontSize;
+    color: $textColor;
+  }
+  @mixin fullBlock {
+    width: 100%;
+    float: left;
+  }
+  .block-section {
+    @include fullBlock;
+  }
+  
+  .container {
+    max-width: 1248px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
